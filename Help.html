@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SciCalc Help</title>
+<style>
+body{font-family:Arial,sans-serif;font-size:13px;color:#c9d1d9;background:#0d1117;margin:0;padding:12px}
+h1{color:#58a6ff;font-size:16px;margin:0 0 4px 0}
+h2{color:#388bfd;font-size:13px;margin:14px 0 4px 0;border-bottom:1px solid #21262d;padding-bottom:3px}
+h3{color:#d29922;font-size:12px;margin:10px 0 3px 0}
+p,li{color:#8b949e;margin:2px 0;line-height:1.5}
+ul{margin:3px 0;padding-left:18px}
+table{border-collapse:collapse;width:100%;margin:4px 0;font-size:11px}
+th{background:#161b22;color:#58a6ff;text-align:left;padding:4px 6px;border:1px solid #21262d}
+td{padding:3px 6px;border:1px solid #21262d;color:#8b949e}
+tr:nth-child(even){background:#0d1117}
+tr:nth-child(odd){background:#111316}
+.tip{background:#161b22;border-left:3px solid #388bfd;padding:4px 8px;margin:4px 0;font-size:11px;color:#8b949e}
+.key{background:#21262d;border:1px solid #30363d;border-radius:3px;padding:1px 5px;font-size:10px;color:#c9d1d9;font-family:monospace}
+a{color:#388bfd;text-decoration:none}
+.ver{color:#3fb950;font-size:10px}
+.section{margin-bottom:12px}
+</style>
+</head>
+<body>
+<h1>SciCalc &mdash; Scientific Calculator for Autodesk Fusion</h1>
+<span class="ver">Version 1.1.0 &nbsp;&bull;&nbsp; Help Documentation</span>
+
+<div class="section">
+<h2>Overview</h2>
+<p>SciCalc is a fully-featured scientific calculator that lives inside Fusion as a docked panel.
+It reads geometry values directly from your active selection and lets you use those values
+straight in your calculations &mdash; no copying numbers between windows.</p>
+<p>Click the <b>Scientific Calculator</b> button in the <b>Inspect</b> toolbar panel to open it.
+Close the panel with the X button; click the toolbar button again to reopen.</p>
+</div>
+
+<div class="section">
+<h2>Calculator</h2>
+<h3>Entering Expressions</h3>
+<ul>
+<li>Type directly on your keyboard or click the on-screen buttons</li>
+<li>Click anywhere in the expression to position the cursor for inline editing</li>
+<li>Bracket balance is shown in the display</li>
+<li>Scientific notation is supported: <span class="key">1.5e6</span> = 1,500,000</li>
+</ul>
+<h3>Keyboard Shortcuts</h3>
+<table>
+<tr><th>Key</th><th>Action</th></tr>
+<tr><td><span class="key">Enter</span></td><td>Calculate result</td></tr>
+<tr><td><span class="key">Escape</span></td><td>Clear expression</td></tr>
+<tr><td><span class="key">Backspace</span></td><td>Delete character before cursor</td></tr>
+<tr><td><span class="key">&uarr;</span> / <span class="key">&darr;</span></td><td>Recall previous / next history entry</td></tr>
+<tr><td><span class="key">Ctrl+Z</span></td><td>Undo last expression change</td></tr>
+</table>
+<div class="tip">Full numpad support: 0&ndash;9, decimal, +&minus;&times;&divide;, Enter, Backspace, Escape</div>
+
+<h3>Angle Modes</h3>
+<table>
+<tr><th>Mode</th><th>Description</th></tr>
+<tr><td>DEG</td><td>Degrees (default)</td></tr>
+<tr><td>RAD</td><td>Radians</td></tr>
+<tr><td>GRAD</td><td>Gradians (400 per full circle)</td></tr>
+<tr><td>ENG</td><td>Engineering notation for results</td></tr>
+</table>
+
+<h3>SHIFT Mode</h3>
+<p>Press <b>SHIFT</b> to access inverse and secondary functions:
+asin, acos, atan, sinh, cosh, tanh, log2, exp, and more.</p>
+
+<h3>Fix Decimal</h3>
+<p>Enter a number (0&ndash;12) in the Fix box to set decimal places.
+Leave blank for auto formatting. Click <b>Auto</b> to reset.</p>
+
+<h3>Display Options</h3>
+<ul>
+<li><b>Font size</b> &mdash; adjust the result display size (12&ndash;48px)</li>
+<li><b>Light / Dark</b> &mdash; toggle theme</li>
+<li><b>Compact / Full</b> &mdash; hide or show advanced panels to save space</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Functions Reference</h2>
+<table>
+<tr><th>Function</th><th>Description</th><th>SHIFT version</th></tr>
+<tr><td>sin(x)</td><td>Sine of x</td><td>asin(x) &mdash; inverse sine</td></tr>
+<tr><td>cos(x)</td><td>Cosine of x</td><td>acos(x) &mdash; inverse cosine</td></tr>
+<tr><td>tan(x)</td><td>Tangent of x</td><td>atan(x) &mdash; inverse tangent</td></tr>
+<tr><td>sinh(x)</td><td>Hyperbolic sine</td><td>asinh(x)</td></tr>
+<tr><td>cosh(x)</td><td>Hyperbolic cosine</td><td>acosh(x)</td></tr>
+<tr><td>tanh(x)</td><td>Hyperbolic tangent</td><td>atanh(x)</td></tr>
+<tr><td>sqrt(x)</td><td>Square root</td><td>x&sup2; &mdash; square</td></tr>
+<tr><td>cbrt(x)</td><td>Cube root</td><td>x&sup3; &mdash; cube</td></tr>
+<tr><td>log(x)</td><td>Base-10 logarithm</td><td>10^x &mdash; antilog</td></tr>
+<tr><td>ln(x)</td><td>Natural logarithm</td><td>exp(x) &mdash; e^x</td></tr>
+<tr><td>log2(x)</td><td>Base-2 logarithm</td><td>2^x</td></tr>
+<tr><td>abs(x)</td><td>Absolute value</td><td>&mdash;</td></tr>
+<tr><td>ceil(x)</td><td>Round up to integer</td><td>&mdash;</td></tr>
+<tr><td>floor(x)</td><td>Round down to integer</td><td>&mdash;</td></tr>
+<tr><td>round(x)</td><td>Round to nearest integer</td><td>&mdash;</td></tr>
+<tr><td>x!</td><td>Factorial</td><td>&mdash;</td></tr>
+<tr><td>x^y</td><td>x to the power of y</td><td>&mdash;</td></tr>
+<tr><td>x%y</td><td>Remainder (modulo)</td><td>&mdash;</td></tr>
+<tr><td>atan2(y,x)</td><td>Four-quadrant arctangent</td><td>&mdash;</td></tr>
+<tr><td>nPr(n,r)</td><td>Permutations</td><td>&mdash;</td></tr>
+<tr><td>nCr(n,r)</td><td>Combinations</td><td>&mdash;</td></tr>
+<tr><td>hypot(x,y)</td><td>sqrt(x&sup2;+y&sup2;)</td><td>&mdash;</td></tr>
+</table>
+
+<h3>Constants</h3>
+<table>
+<tr><th>Symbol</th><th>Value</th><th>Description</th></tr>
+<tr><td>pi or &pi;</td><td>3.14159265...</td><td>Pi</td></tr>
+<tr><td>e</td><td>2.71828182...</td><td>Euler&apos;s number</td></tr>
+<tr><td>phi</td><td>1.61803398...</td><td>Golden ratio</td></tr>
+<tr><td>ans</td><td>&mdash;</td><td>Last result</td></tr>
+<tr><td>mem</td><td>&mdash;</td><td>Memory store value</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>History Panel</h2>
+<ul>
+<li>Every calculation is saved automatically to history</li>
+<li>Click the expression field to <b>edit</b> it inline</li>
+<li>Click the note field to add a <b>note</b></li>
+<li>Press <span class="key">&uarr;</span> / <span class="key">&darr;</span> in the main display to recall history entries</li>
+<li><b>&#9733; Pin</b> &mdash; pinned entries survive history clear</li>
+<li><b>Run</b> &mdash; re-evaluate the stored expression with current variables</li>
+<li><b>Load</b> &mdash; load the expression into the calculator display</li>
+<li><b>Search</b> &mdash; filter history by expression or note text</li>
+<li><b>Clear</b> &mdash; removes all unpinned entries</li>
+</ul>
+<div class="tip">History is saved to <b>history.json</b> in the add-in folder and survives Fusion restarts.</div>
+</div>
+
+<div class="section">
+<h2>Variables Panel</h2>
+<ul>
+<li>Click <b>+ Var</b> to save the current result as a named variable</li>
+<li>Give it a short name (e.g. <b>r</b>, <b>len</b>, <b>k</b>) &mdash; it then appears as a chip button</li>
+<li>Click a chip to insert its value into the expression</li>
+<li>Click <b>x</b> on a chip to delete it</li>
+</ul>
+<div class="tip">Variables are saved to <b>variables.json</b> and are available every time you open Fusion.</div>
+</div>
+
+<div class="section">
+<h2>Bookmarks Panel</h2>
+<ul>
+<li>Click <b>+ Bookmark</b> to save the current expression</li>
+<li>The name field defaults to <b>Bookmark</b> &mdash; click it to rename inline</li>
+<li>Click the expression field to edit it inline</li>
+<li><b>Use</b> &mdash; loads the expression into the calculator display</li>
+<li><b>x</b> &mdash; deletes the bookmark</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Quick Constants Panel</h2>
+<p>Pre-loaded physical and engineering constants including &pi;, e, g (gravity),
+steel modulus, common material densities and more. Click any constant to insert
+its value into the expression.</p>
+</div>
+
+<div class="section">
+<h2>Unit Conversions Panel</h2>
+<p>Select a category, enter a value, choose From and To units, then click <b>Calc</b>.
+Click <b>Use</b> to insert the result into the calculator expression.</p>
+<table>
+<tr><th>Category</th><th>Units available</th></tr>
+<tr><td>Length</td><td>mm, cm, m, km, in, ft, yd, mi</td></tr>
+<tr><td>Area</td><td>mm&sup2;, cm&sup2;, m&sup2;, km&sup2;, in&sup2;, ft&sup2;, acre, ha</td></tr>
+<tr><td>Volume</td><td>mm&sup3;, cm&sup3;, L, m&sup3;, in&sup3;, ft&sup3;, gal, fl oz</td></tr>
+<tr><td>Mass</td><td>mg, g, kg, t, oz, lb, st</td></tr>
+<tr><td>Temperature</td><td>C, F, K</td></tr>
+<tr><td>Force</td><td>N, kN, MN, lbf, kgf</td></tr>
+<tr><td>Pressure</td><td>Pa, kPa, MPa, bar, psi, atm</td></tr>
+<tr><td>Angle</td><td>deg, rad, grad, rev</td></tr>
+<tr><td>Speed</td><td>m/s, km/h, mph, ft/s, knot</td></tr>
+<tr><td>Energy</td><td>J, kJ, MJ, kWh, BTU, cal, kcal</td></tr>
+<tr><td>Torque</td><td>Nm, kNm, lbf&middot;ft, lbf&middot;in, kgf&middot;m</td></tr>
+<tr><td>Power</td><td>W, kW, MW, hp, BTU/hr</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Triangle Solver</h2>
+<p>Enter any <b>3 known values</b> (sides a, b, c and/or angles A, B, C) and click <b>Solve</b>.
+The remaining values are computed using the Law of Sines and Law of Cosines.</p>
+<ul>
+<li>Sides are in whatever unit you are working in (mm, m, etc.)</li>
+<li>Angles are in the current angle mode (DEG / RAD / GRAD)</li>
+<li>At least one side must be known for a unique solution</li>
+<li>Click <b>Use</b> next to any result to insert it into the calculator</li>
+<li>Click <b>Clear</b> to reset all fields</li>
+</ul>
+<div class="tip">Only fields you have typed into are treated as known inputs. Computed fields are recalculated fresh on each Solve.</div>
+</div>
+
+<div class="section">
+<h2>Circle Geometry</h2>
+<p>Enter <b>any one value</b> and click <b>Calc</b> to compute all others.</p>
+<table>
+<tr><th>Field</th><th>Description</th></tr>
+<tr><td>Radius (r)</td><td>Distance from centre to edge</td></tr>
+<tr><td>Diameter (d)</td><td>d = 2r</td></tr>
+<tr><td>Area (A)</td><td>A = &pi;r&sup2;</td></tr>
+<tr><td>Circumference (C)</td><td>C = 2&pi;r</td></tr>
+<tr><td>Arc length</td><td>Arc length for a given central angle</td></tr>
+<tr><td>Sector area</td><td>Area of pie slice for a given central angle</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>DMS &harr; Decimal Degrees</h2>
+<p>Convert between degrees/minutes/seconds and decimal degrees.</p>
+<ul>
+<li><b>D&deg; M&prime; S&Prime; &rarr; Decimal</b>: enter degrees, minutes and seconds, click <b>Calc</b></li>
+<li><b>Decimal &rarr; D&deg; M&prime; S&Prime;</b>: enter decimal degrees, click <b>Calc</b></li>
+<li>Negative angles: enter a negative value in the degrees field</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Polar &harr; Rectangular</h2>
+<p>Convert between polar (r, &theta;) and rectangular (x, y) coordinates.
+Angles use the current angle mode (DEG / RAD / GRAD).</p>
+<ul>
+<li><b>Polar &rarr; Rect</b>: enter r and &theta;, click <b>Calc</b> to get x and y</li>
+<li><b>Rect &rarr; Polar</b>: enter x and y, click <b>Calc</b> to get r and &theta;</li>
+<li>Click <b>Use x</b>, <b>Use y</b>, <b>Use r</b> or <b>Use &theta;</b> to insert into the calculator</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Beam Section Properties</h2>
+<p>Calculates cross-section properties for a <b>solid rectangular beam</b>.
+Enter Width (w) and Height (h) in mm.</p>
+<table>
+<tr><th>Property</th><th>Formula</th></tr>
+<tr><td>Area (A)</td><td>w &times; h</td></tr>
+<tr><td>I<sub>xx</sub></td><td>w &times; h&sup3; / 12</td></tr>
+<tr><td>I<sub>yy</sub></td><td>h &times; w&sup3; / 12</td></tr>
+<tr><td>S<sub>xx</sub></td><td>I<sub>xx</sub> / (h/2)</td></tr>
+<tr><td>S<sub>yy</sub></td><td>I<sub>yy</sub> / (w/2)</td></tr>
+<tr><td>r<sub>xx</sub></td><td>sqrt(I<sub>xx</sub> / A)</td></tr>
+<tr><td>r<sub>yy</sub></td><td>sqrt(I<sub>yy</sub> / A)</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Spring Calculator</h2>
+<p>Helical compression spring properties. All dimensions in mm, modulus in MPa.</p>
+<table>
+<tr><th>Input</th><th>Symbol</th><th>Description</th></tr>
+<tr><td>Wire diameter</td><td>d</td><td>Diameter of spring wire (mm)</td></tr>
+<tr><td>Coil diameter</td><td>D</td><td>Mean coil diameter (mm)</td></tr>
+<tr><td>Active coils</td><td>n</td><td>Number of active coils</td></tr>
+<tr><td>Shear modulus</td><td>G</td><td>Material shear modulus (MPa) &mdash; steel &asymp; 79,000</td></tr>
+</table>
+<table>
+<tr><th>Output</th><th>Formula</th></tr>
+<tr><td>Spring rate k (N/mm)</td><td>G &times; d&sup4; / (8 &times; D&sup3; &times; n)</td></tr>
+<tr><td>Spring index C</td><td>D / d</td></tr>
+<tr><td>Wahl factor K<sub>w</sub></td><td>(4C&minus;1)/(4C&minus;4) + 0.615/C</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Bolt / Thread Data</h2>
+<p>Select a bolt designation from the dropdown to display thread data.</p>
+<table>
+<tr><th>Column</th><th>Description</th></tr>
+<tr><td>Designation</td><td>Thread name e.g. M6, M12, 1/4-20 UNC</td></tr>
+<tr><td>Pitch (mm)</td><td>Distance between thread crests</td></tr>
+<tr><td>Minor dia (mm)</td><td>Root diameter of thread</td></tr>
+<tr><td>Stress area (mm&sup2;)</td><td>Effective cross-sectional area for tensile load calculations</td></tr>
+</table>
+<p>Covers <b>M1 to M36</b> (ISO metric) and common <b>UNC</b> sizes.
+Click <b>Use</b> next to any value to insert it into the calculator.</p>
+</div>
+
+<div class="section">
+<h2>Vector Maths Panel</h2>
+<p>Perform 3D vector operations on two vectors A (x, y, z) and B (x, y, z).</p>
+<h3>Filling Vectors from Selection</h3>
+<p>Select a <b>vertex or sketch point</b> in Fusion &mdash; its world X, Y, Z coordinates
+automatically fill into the active target vector (A or B).
+Click <b>to A</b> or <b>to B</b> to choose which vector receives the next selection.
+A brief <b>filled A</b> confirmation appears when values are loaded.</p>
+<h3>Operations</h3>
+<table>
+<tr><th>Button</th><th>Operation</th><th>Result</th></tr>
+<tr><td>A+B</td><td>Vector addition</td><td>Component vector (x, y, z)</td></tr>
+<tr><td>A-B</td><td>Vector subtraction</td><td>Component vector (x, y, z)</td></tr>
+<tr><td>A dot B</td><td>Dot product</td><td>Scalar value</td></tr>
+<tr><td>AxB</td><td>Cross product</td><td>Component vector (x, y, z)</td></tr>
+<tr><td>|A|</td><td>Magnitude of A</td><td>Scalar value</td></tr>
+<tr><td>|B|</td><td>Magnitude of B</td><td>Scalar value</td></tr>
+<tr><td>norm A</td><td>Unit vector of A</td><td>Component vector (x, y, z)</td></tr>
+<tr><td>norm B</td><td>Unit vector of B</td><td>Component vector (x, y, z)</td></tr>
+<tr><td>angle</td><td>Angle between A and B</td><td>Scalar (current angle mode)</td></tr>
+</table>
+<p>Vector results show <b>Use x</b>, <b>Use y</b>, <b>Use z</b> buttons.
+Scalar results show a single <b>Use</b> button. All insert into the calculator expression.</p>
+</div>
+
+<div class="section">
+<h2>Selection Values Panel</h2>
+<p>SciCalc automatically reads your active Fusion selection every 0.4 seconds
+and displays the relevant geometry values. Click <b>Use</b> next to any row
+to insert that value into the calculator expression.</p>
+<h3>3D Model Entities</h3>
+<table>
+<tr><th>Entity</th><th>Values displayed</th></tr>
+<tr><td>Linear edge</td><td>Length (mm)</td></tr>
+<tr><td>Circular edge</td><td>Radius, Diameter (mm)</td></tr>
+<tr><td>Planar face</td><td>Area (mm&sup2;)</td></tr>
+<tr><td>Cylindrical face</td><td>Radius, Diameter, Height (mm)</td></tr>
+<tr><td>Spherical face</td><td>Radius, Diameter (mm)</td></tr>
+<tr><td>Toroidal face</td><td>Major radius, Minor radius (mm)</td></tr>
+<tr><td>Conical face</td><td>Half angle, Top/Bottom radius (mm)</td></tr>
+<tr><td>Body</td><td>Bounding box X/Y/Z, Volume (mm&sup3;), Surface area (mm&sup2;), Mass (g), Centre of mass X/Y/Z</td></tr>
+<tr><td>Vertex</td><td>World X, Y, Z (mm)</td></tr>
+<tr><td>2 vertices / points</td><td>Distance (mm), Midpoint X/Y/Z (mm)</td></tr>
+<tr><td>2 linear edges</td><td>Angle between edges (deg)</td></tr>
+<tr><td>2 faces</td><td>Face normal angle (deg), Dihedral angle (deg)</td></tr>
+</table>
+<h3>Sketch Entities</h3>
+<table>
+<tr><th>Entity</th><th>Values displayed</th></tr>
+<tr><td>Line</td><td>Length (mm)</td></tr>
+<tr><td>Full circle</td><td>Radius, Diameter, Circumference (mm)</td></tr>
+<tr><td>Arc</td><td>Radius, Diameter, Arc length (mm), Sweep angle (deg)</td></tr>
+<tr><td>Spline</td><td>Length (mm), Start/End world coords (mm)</td></tr>
+<tr><td>Conic curve</td><td>Length (mm), Rho, Start/End/Apex world coords (mm)</td></tr>
+<tr><td>Sketch point</td><td>Sketch X/Y (mm), World X/Y/Z (mm)</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Persistent Data</h2>
+<p>The following files are stored in the SciCalc add-in folder and <b>survive Fusion updates</b>:</p>
+<table>
+<tr><th>File</th><th>Contents</th></tr>
+<tr><td>history.json</td><td>Calculation history with notes and pin state</td></tr>
+<tr><td>variables.json</td><td>Named constants</td></tr>
+<tr><td>settings.json</td><td>Theme, font size, Fix decimal, compact mode</td></tr>
+<tr><td>bookmarks.json</td><td>Saved named expressions</td></tr>
+</table>
+<div class="tip">When updating SciCalc, replace only SciCalc.py, calculator.html and the icons folder.
+Do <b>not</b> replace these data files &mdash; they contain your saved data.</div>
+</div>
+
+<div class="section">
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Issue</th><th>Solution</th></tr>
+<tr><td>Calculator does not open on toolbar click</td><td>Go to Tools &rarr; Scripts and Add-Ins, find SciCalc, click Run</td></tr>
+<tr><td>Selection Values panel shows nothing</td><td>Select an entity in the Fusion canvas. The panel updates every 0.4s.</td></tr>
+<tr><td>History or variables missing after update</td><td>Ensure history.json and variables.json were not overwritten &mdash; restore from backup if needed</td></tr>
+<tr><td>Panel layout looks wrong</td><td>Try toggling Compact / Full mode, or adjusting the panel width</td></tr>
+<tr><td>Calculation shows Error</td><td>Check brackets are balanced. The display highlights the error position in red.</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Tips &amp; Tricks</h2>
+<ul>
+<li>Select a face, then click <b>Use</b> on its area &mdash; immediately usable in a stress calculation</li>
+<li>Hold a result in a <b>Variable</b> (e.g. <b>k</b>) and use it across multiple calculations</li>
+<li>Use <b>ans</b> in an expression to chain calculations: <span class="key">ans * 1.15</span></li>
+<li>Select two vertices to get the distance between them instantly</li>
+<li>Switch to <b>Compact</b> mode when you only need the calculator pad and selection values</li>
+<li>Pin important history entries with <b>&#9679;</b> so they survive history clear</li>
+<li>Use <b>Bookmarks</b> to save formulas you use repeatedly, e.g. a safety factor formula</li>
+<li>The Vector Maths panel uses the current angle mode (DEG/RAD/GRAD) for the angle operation</li>
+</ul>
+</div>
+
+<div style="margin-top:16px;padding-top:8px;border-top:1px solid #21262d;color:#3a3a5c;font-size:10px">
+&copy; 2025 SciCalc for Autodesk Fusion &nbsp;&bull;&nbsp; Version 1.1.0
+</div>
+
+</body>
+</html>
