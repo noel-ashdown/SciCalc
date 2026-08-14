@@ -1,0 +1,6 @@
+SciCalc is a local add-in for Autodesk Fusion.
+It does not collect, transmit, store or share any personal data or usage information.
+All data created by SciCalc (calculation history, variables, settings and bookmarks)
+is stored exclusively in files on your local machine and is never transmitted to any external server or third party.
+
+For questions contact: [noelashdowm@blueyonder.co.uk]
