@@ -1,0 +1,60 @@
+SciCalc - Installation Instructions
+====================================
+
+WINDOWS
+-------
+1. Unzip SciCalc.zip to a temporary location.
+
+2. Copy the SciCalc folder to:
+
+      %APPDATA%\Autodesk\Autodesk Fusion\API\AddIns\
+
+   Tip: paste the path above into Windows Explorer address bar to navigate
+   directly to the AddIns folder.
+
+   The result should be:
+      ...\AddIns\SciCalc\SciCalc.py
+      ...\AddIns\SciCalc\calculator.html
+      etc.
+
+3. Open Autodesk Fusion.
+
+4. Go to Tools > Scripts and Add-Ins (or press Shift+S).
+
+5. Click the Add-Ins tab.
+
+6. Find SciCalc in the list. If it does not appear click the green + button
+   and browse to the SciCalc folder.
+
+7. Tick Run on Startup so the calculator loads every time Fusion starts.
+
+8. Click Run.
+
+9. The Scientific Calculator button appears in the Inspect panel on the
+   main toolbar. Click it to open the calculator.
+
+MACOS
+-----
+1. Unzip SciCalc.zip to a temporary location.
+
+2. Copy the SciCalc folder to:
+
+      ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/
+
+   Tip: in Finder press Cmd+Shift+G and paste the path above.
+
+3. Follow steps 3-9 from the Windows instructions above.
+
+UNINSTALL
+---------
+1. In Fusion go to Tools > Scripts and Add-Ins > Add-Ins tab.
+2. Select SciCalc and click Stop.
+3. Delete the SciCalc folder from the AddIns directory.
+
+UPDATING
+--------
+1. Stop the add-in as described in Uninstall step 1-2.
+2. Replace SciCalc.py, calculator.html and the icons folder with the new
+   versions. Do NOT replace history.json, variables.json, settings.json
+   or bookmarks.json - these contain your saved data.
+3. Restart the add-in.
