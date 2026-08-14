@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 32 32"
+   width="32"
+   height="32"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="64x64.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="32"
+       height="32"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <!-- Body -->
+  <rect
+     x="2"
+     y="2"
+     width="28"
+     height="28"
+     rx="4"
+     ry="4"
+     fill="#3859a0"
+     id="rect1" />
+  <!-- Screen -->
+  <rect
+     x="5"
+     y="4"
+     width="22"
+     height="9"
+     rx="2"
+     ry="2"
+     fill="#0d1117"
+     id="rect2" />
+  <!-- Screen digit -->
+  <rect
+     x="19"
+     y="5.5"
+     width="2"
+     height="6"
+     rx="0.5"
+     fill="#58a6ff"
+     id="rect3" />
+  <rect
+     x="22"
+     y="10"
+     width="2"
+     height="2"
+     rx="0.5"
+     fill="#58a6ff"
+     id="rect4" />
+  <!-- Button row 1 -->
+  <rect
+     x="5"
+     y="15"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#5869b0"
+     id="rect5" />
+  <rect
+     x="13"
+     y="15"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#5869b0"
+     id="rect6" />
+  <rect
+     x="21"
+     y="15"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#da3633"
+     id="rect7" />
+  <!-- Button row 2 -->
+  <rect
+     x="5"
+     y="21"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#5869b0"
+     id="rect8" />
+  <rect
+     x="13"
+     y="21"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#5869b0"
+     id="rect9" />
+  <rect
+     x="21"
+     y="21"
+     width="6"
+     height="4"
+     rx="1"
+     fill="#3fb950"
+     id="rect10" />
+</svg>
+
