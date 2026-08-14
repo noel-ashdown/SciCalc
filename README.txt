@@ -1,5 +1,13 @@
-# SciCalc 1.1.0
-Scientific calculator for Fusion 360
+SciCalc - Scientific Calculator for Autodesk Fusion
+====================================================
+Version 1.1.0
+
+OVERVIEW
+--------
+SciCalc is a fully-featured scientific calculator that lives inside Autodesk
+Fusion as a docked panel. It reads dimensions directly from your selected
+geometry and lets you use those values straight in your calculations.
+
 FEATURES
 --------
 Calculator
@@ -45,3 +53,29 @@ Automatically reads the active Fusion selection and displays:
 	- Angle between two selected faces (normal and dihedral)
 	- Sketch lines, circles, arcs, splines, conic curves and points
 	Every value has a Use button to insert it directly into the expression.
+
+FILES
+-----
+	SciCalc.py			Add-in entry point
+	SciCalc.manifest	Fusion registration file
+	calculator.html		Calculator user interface
+	help.html			Help file
+	README.txt			Readme file
+	INSTALL.txt			Installation guide
+	icons/				Toolbar button icons (SVG + PNG)
+
+The following data files are created automatically on first use:
+	history.json		Calculation history
+	variables.json		Named constants
+	settings.json		UI preferences
+	bookmarks.json		Saved expressions
+
+LICENCE
+-------
+This add-in is provided free of charge. You are free to use, modify and
+distribute it. Attribution appreciated but not required.
+
+SUPPORT
+-------
+If you encounter any issues please check the Autodesk Community forums or
+the Autodesk App Store listing for updates.
