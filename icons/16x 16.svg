@@ -1,0 +1,19 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Body -->
+  <rect x="2" y="2" width="28" height="28" rx="4" ry="4" fill="#3859A0"/>
+  <!-- Screen -->
+  <rect x="5" y="4" width="22" height="9" rx="2" ry="2" fill="#0D1117"/>
+  <!-- Screen digit -->
+  <rect x="19" y="5.5" width="2" height="6" rx="0.5" fill="#58A6FF"/>
+  <rect x="22" y="10" width="2" height="2" rx="0.5" fill="#58A6FF"/>
+  <!-- Button row 1 -->
+  <rect x="5"  y="15" width="6" height="4" rx="1" fill="#5869B0"/>
+  <rect x="13" y="15" width="6" height="4" rx="1" fill="#5869B0"/>
+  <rect x="21" y="15" width="6" height="4" rx="1" fill="#DA3633"/>
+  <!-- Button row 2 -->
+  <rect x="5"  y="21" width="6" height="4" rx="1" fill="#5869B0"/>
+  <rect x="13" y="21" width="6" height="4" rx="1" fill="#5869B0"/>
+  <rect x="21" y="21" width="6" height="4" rx="1" fill="#3FB950"/>
+</svg>
