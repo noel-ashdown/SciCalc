@@ -1,18 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 16 16"
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="16x16.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="25.21875"
+     inkscape:cx="15.980173"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="384"
+     inkscape:window-y="1432"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
   <!-- Body -->
-  <rect x="2" y="2" width="28" height="28" rx="4" ry="4" fill="#3859A0"/>
+  <rect
+     x="2"
+     y="2"
+     width="12"
+     height="12"
+     rx="1.7142856"
+     ry="1.7142856"
+     fill="#3859a0"
+     id="rect1"
+     style="stroke-width:0.428572" />
   <!-- Screen -->
-  <rect x="5" y="4" width="22" height="9" rx="2" ry="2" fill="#0D1117"/>
+  <rect
+     x="3.2857141"
+     y="2.8571429"
+     width="9.4285707"
+     height="3.8571427"
+     rx="0.85714281"
+     ry="0.85714281"
+     fill="#0d1117"
+     id="rect2"
+     style="stroke-width:0.428572" />
   <!-- Screen digit -->
-  <rect x="19" y="5.5" width="2" height="6" rx="0.5" fill="#58A6FF"/>
-  <rect x="22" y="10" width="2" height="2" rx="0.5" fill="#58A6FF"/>
+  <rect
+     x="9.2857141"
+     y="3.5"
+     width="0.85714281"
+     height="2.5714285"
+     rx="0.2142857"
+     fill="#58a6ff"
+     id="rect3"
+     style="stroke-width:0.428572" />
+  <rect
+     x="10.571428"
+     y="5.4285712"
+     width="0.85714281"
+     height="0.85714281"
+     rx="0.2142857"
+     fill="#58a6ff"
+     id="rect4"
+     style="stroke-width:0.428572" />
   <!-- Button row 1 -->
-  <rect x="5"  y="15" width="6" height="4" rx="1" fill="#5869B0"/>
-  <rect x="13" y="15" width="6" height="4" rx="1" fill="#5869B0"/>
-  <rect x="21" y="15" width="6" height="4" rx="1" fill="#DA3633"/>
+  <rect
+     x="3.2857141"
+     y="7.5714283"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#5869b0"
+     id="rect5"
+     style="stroke-width:0.428572" />
+  <rect
+     x="6.7142854"
+     y="7.5714283"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#5869b0"
+     id="rect6"
+     style="stroke-width:0.428572" />
+  <rect
+     x="10.142857"
+     y="7.5714283"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#da3633"
+     id="rect7"
+     style="stroke-width:0.428572" />
   <!-- Button row 2 -->
-  <rect x="5"  y="21" width="6" height="4" rx="1" fill="#5869B0"/>
-  <rect x="13" y="21" width="6" height="4" rx="1" fill="#5869B0"/>
-  <rect x="21" y="21" width="6" height="4" rx="1" fill="#3FB950"/>
+  <rect
+     x="3.2857141"
+     y="10.142857"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#5869b0"
+     id="rect8"
+     style="stroke-width:0.428572" />
+  <rect
+     x="6.7142854"
+     y="10.142857"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#5869b0"
+     id="rect9"
+     style="stroke-width:0.428572" />
+  <rect
+     x="10.142857"
+     y="10.142857"
+     width="2.5714285"
+     height="1.7142856"
+     rx="0.4285714"
+     fill="#3fb950"
+     id="rect10"
+     style="stroke-width:0.428572" />
 </svg>
