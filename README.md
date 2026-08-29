@@ -1,6 +1,6 @@
 # SciCalc - Scientific Calculator for Autodesk Fusion
 
-![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.2.2-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)
 ![License](https://img.shields.io/badge/license-Free-green.svg)
 
