@@ -456,7 +456,7 @@
 <body>
 <div id="appHeader" style="display:flex;justify-content:space-between;align-items:center;padding:4px 8px 3px 8px;background:var(--pan);border-radius:10px;margin-bottom:7px">
     <span style="color:var(--acc);font-size:11px;font-weight:700;letter-spacing:0.5px">SciCalc</span>
-    <span style="color:#8b949e;font-size:9px">v1.2.0</span>
+    <span style="color:#8b949e;font-size:9px">v1.2.2</span>
 </div>
     <div class="pan">
         <div style="display:flex;justify-content:flex-end;align-items:center;gap:4px">
@@ -532,7 +532,7 @@ cos
 <button class="b s shiftable" data-v="tan(" data-s="atan(" data-nl="tan" data-sl="tan⁻¹">
 tan
 </button>
-<button class="b s shiftable" data-v="log(" data-s="ln(" data-nl="log" data-sl="ln(">
+<button class="b s shiftable" data-v="log(" data-s="alog" data-nl="log" data-sl="10ˣ">
 log
 </button>
 <button class="b s shiftable" data-v="sqrt(" data-s="cbrt(" data-nl="√x" data-sl="∛x">
@@ -547,8 +547,8 @@ cosh
 <button class="b s shiftable" data-v="tanh(" data-s="round(" data-nl="tanh" data-sl="round(">
 tanh
 </button>
-<button class="b s shiftable" data-v="abs(" data-s="exp(" data-nl="|x|" data-sl="eˣ">
-|x|
+<button class="b s shiftable" data-v="ln(" data-s="exp(" data-nl="ln" data-sl="eˣ">
+ln
 </button>
 <button class="b s shiftable" data-v="rcp" data-s="fact(" data-nl="1/x" data-sl="n!">
 1/x
@@ -923,24 +923,41 @@ Clear
     <div style="margin-bottom:6px">
         <button id="polDiagBtn" class="ps" style="width:100%;text-align:left;padding:3px 6px" onclick="toggleDiag('pol')">Show diagram</button>
         <div id="polDiag" style="display:none;margin-top:4px">
-            <svg width="100%" height="150" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
-                <line x1="20" y1="75" x2="220" y2="75" stroke="#6e7681" stroke-width="1" stroke-dasharray="3,3"/>
-                <line x1="120" y1="10" x2="120" y2="140" stroke="#6e7681" stroke-width="1" stroke-dasharray="3,3"/>
-                <text x="222" y="79" fill="#6e7681" font-size="11">x</text>
-                <text x="122" y="14" fill="#6e7681" font-size="11">y</text>
-                <circle cx="195" cy="30" r="4" fill="#388bfd"/>
-                <text x="200" y="28" fill="#388bfd" font-size="12" font-weight="bold">P(x,y)</text>
-                <line x1="120" y1="75" x2="195" y2="30" stroke="#3fb950" stroke-width="2"/>
-                <text x="148" y="48" fill="#3fb950" font-size="13" font-weight="bold">r</text>
-                <path d="M 155,75 A 35,35 0 0,0 140,42" fill="none" stroke="#d29922" stroke-width="1.5"/>
-                <text x="158" y="68" fill="#d29922" font-size="13" font-weight="bold">&#952;</text>
-                <line x1="195" y1="30" x2="195" y2="75" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4,3"/>
-                <text x="197" y="75" fill="#58a6ff" font-size="11">x</text>
-                <line x1="120" y1="30" x2="195" y2="30" stroke="#f78166" stroke-width="1" stroke-dasharray="4,3"/>
-                <text x="120" y="27" fill="#f78166" font-size="11">y</text>
-                <circle cx="120" cy="75" r="3" fill="#8b949e"/>
-                <text x="108" y="88" fill="#8b949e" font-size="10">O</text>
-            </svg>
+           <svg width="100%" height="100%" version="1.1" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+		<g>
+				<path d="m40.081 100.87h143.06" stop-color="#000000"/>
+				<path d="m40.082 100.41v0.92383h143.06v-0.92383z" fill="#6e7681" stop-color="#000000"/>
+				<g fill="#6e7681">
+						<path d="m42.295 97.77-3.0977 3.0977 3.0977 3.0996 0.6543-0.6543-2.4453-2.4453 2.4453-2.4453z" stop-color="#000000"/>
+						<path d="m180.93 97.77-0.6543 0.65234 2.4453 2.4453-2.4453 2.4453 0.6543 0.6543 3.0977-3.0996z" stop-color="#000000"/>
+				</g>
+				<path d="m63.814 23.302v104.56" stop-color="#000000"/>
+				<path d="m63.324 23.303v104.56h0.98047v-104.56z" fill="#6e7681" stop-color="#000000"/>
+				<g fill="#6e7681">
+						<path d="m63.814 22.365-3.2852 3.2852 0.69141 0.69141 2.5938-2.5918 2.5918 2.5918 0.69336-0.69141z" stop-color="#000000"/>
+						<path d="m61.221 124.82-0.69141 0.69336 3.2852 3.2852 3.2852-3.2852-0.69336-0.69336-2.5918 2.5938z" stop-color="#000000"/>
+				</g>
+		</g>
+		<g stroke-width="1.1933">
+				<text x="188.18114" y="105.02971" fill="#6e7681" font-size="13.126px">x</text>
+				<text x="49.378536" y="26.542753" fill="#6e7681" font-size="13.126px">y</text>
+				<text x="159.48318" y="38.058105" fill="#388bfd" font-size="14.32px" font-weight="bold">P(x,y)</text>
+		</g>
+		<path d="m102.47 78.081a41.766 41.766 0 0 1 6.1864 22.614" fill="none" stroke="#f85149" stroke-width="1.8041" style="paint-order:stroke fill markers"/>
+		<line x1="63.814" x2="153.31" y1="100.87" y2="47.169" stroke="#3fb950" stroke-width="2.3866"/>
+		<text x="97.227074" y="68.648216" fill="#3fb950" font-size="15.513px" font-weight="bold" stroke-width="1.1933">r</text>
+		<text x="94.107208" y="97.106071" fill="#d29922" font-size="13.398px" font-weight="bold" stroke-width="1.0306">θ</text>
+		<g stroke-width="1.1933">
+				<line x1="153.31" x2="153.31" y1="47.169" y2="100.87" stroke="#58a6ff" stroke-dasharray="4, 3"/>
+				<text x="105.36099" y="123.36768" fill="#58a6ff" font-size="13.126px">x</text>
+				<line x1="63.814" x2="153.31" y1="47.169" y2="47.169" stroke="#f78166" stroke-dasharray="4, 3"/>
+				<text x="167.85425" y="77.185478" fill="#f78166" font-size="13.126px">y</text>
+				<circle cx="63.814" cy="100.87" r="3.5799" fill="#8b949e"/>
+				<circle cx="153.31" cy="47.169" r="3.5799" fill="#388bfd"/>
+		</g>
+		<path d="m157.91 99.4 0.90035-0.07641c2.0226-0.44154 3.034-2.4879 3.034-6.139 0-1.6303-0.039-4.0757-0.11767-7.3362-0.0782-3.2266-0.11766-5.6635-0.11766-7.3107 0-2.3095 0.86779-4.0502 2.6034-5.2219-1.7356-1.0699-2.6034-2.8105-2.6034-5.2219 0-1.6133 0.039-4.0672 0.11766-7.3617 0.0783-3.2605 0.11767-5.7059 0.11767-7.3362 0-4.0757-1.3115-6.1135-3.9343-6.1135" fill="none" stroke="#f85149" stroke-linecap="square" stroke-width="1.353" style="paint-order:stroke fill markers" aria-label="}"/>
+		<path d="m65.829 104.7 0.1274 0.85714c0.73625 1.9256 4.1485 2.8883 10.237 2.8883 2.7185 0 6.7962-0.0372 12.233-0.11202 5.3804-0.0744 9.444-0.11202 12.191-0.11202 3.8512 0 6.7537 0.82614 8.7077 2.4784 1.784-1.6522 4.6865-2.4784 8.7076-2.4784 2.6902 0 6.782 0.0371 12.276 0.11202 5.437 0.0745 9.5147 0.11202 12.233 0.11202 6.7962 0 10.194-1.2485 10.194-3.7455" fill="none" stroke="#f85149" stroke-linecap="square" stroke-width="1.377" style="paint-order:stroke fill markers" aria-label="}"/>
+</svg>
         </div>
     </div>
 
@@ -1011,24 +1028,36 @@ Clear
     <!-- Diagram toggle -->
     <div style="margin-bottom:6px">
         <button id="dmsDiagBtn" class="ps" style="width:100%;text-align:left;padding:3px 6px" onclick="toggleDiag('dms')">Show diagram</button>
-        <div id="dmsDiag" style="display:none;margin-top:4px">
-            <svg width="100%" height="140" viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="80" cy="70" r="55" fill="#2a2a3e" stroke="#388bfd" stroke-width="2"/>
-                <line x1="80" y1="18" x2="80" y2="26" stroke="#6e7681" stroke-width="2"/>
-                <line x1="80" y1="114" x2="80" y2="122" stroke="#6e7681" stroke-width="2"/>
-                <line x1="28" y1="70" x2="36" y2="70" stroke="#6e7681" stroke-width="2"/>
-                <line x1="124" y1="70" x2="132" y2="70" stroke="#6e7681" stroke-width="2"/>
-                <line x1="80" y1="70" x2="80" y2="26" stroke="#d29922" stroke-width="3" stroke-linecap="round"/>
-                <line x1="80" y1="70" x2="114" y2="46" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
-                <line x1="80" y1="70" x2="104" y2="88" stroke="#f85149" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="80" cy="70" r="3" fill="#58a6ff"/>
-                <text x="68" y="16" fill="#d29922" font-size="12" font-weight="bold">D&#176;</text>
-                <text x="118" y="44" fill="#3fb950" font-size="12" font-weight="bold">M&#8242;</text>
-                <text x="106" y="100" fill="#f85149" font-size="12" font-weight="bold">S&#8243;</text>
-                <text x="150" y="50" fill="#c9d1d9" font-size="11">dd = D</text>
-                <text x="150" y="66" fill="#c9d1d9" font-size="11">+ M / 60</text>
-                <text x="150" y="82" fill="#c9d1d9" font-size="11">+ S / 3600</text>
-            </svg>
+        <div id="dmsDiag" style="display:none;margin-top:1px">
+<svg width="100%" height="131" version="1.1" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="86" cy="75" r="52.817" fill="#474747ff" stroke="#388bfd" stroke-width="1.9206"/>
+		<g stroke="#6e7681" stroke-width="1.9206">
+				<line x1="86" x2="86" y1="24.339" y2="32.022"/>
+				<line x1="86" x2="86" y1="116.52" y2="124.21"/>
+				<line x1="36.064" x2="43.747" y1="75" y2="75"/>
+				<line x1="128.25" x2="135.94" y1="75" y2="75"/>
+		</g>
+		<g stroke-linecap="round">
+				<line x1="86" x2="86" y1="75" y2="29.884" stroke="#d29922" stroke-width="2.815"/>
+				<line x1="86" x2="118.65" y1="75" y2="46.953" stroke="#3fb950" stroke-width="1.9206"/>
+				<line x1="86" x2="109.05" y1="75" y2="87.285" stroke="#f85149" stroke-width="1.4404"/>
+		</g>
+		<circle cx="86" cy="75" r="2.8809" fill="#58a6ff" stroke-width=".9603"/>
+		<g font-size="11.524px" font-weight="bold" stroke-width=".9603">
+				<text x="66.888847" y="45.601269" fill="#d29922">D°</text>
+				<text x="100.18056" y="45.9925" fill="#3fb950">M′</text>
+				<text x="107.13044" y="79.303398" fill="#f85149">S″</text>
+		</g>
+		<g fill="#c9d1d9" font-family="sans-serif" font-size="11px">
+				<text x="174" y="62.824432" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="174" y="62.824432">dd =D°</tspan></text>
+				<text x="61.733997" y="11.8381" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="61.733997" y="16.8381">360° or 0°</tspan></text>
+				<text x="142.198" y="73.932503" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="142.198" y="79">90°</tspan></text>
+				<text x="74.020996" y="134.74901" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="75" y="140">180°</tspan></text>
+				<text x="6.1520939" y="73.932503" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="6.1520939" y="79">270°</tspan></text>
+				<text x="174" y="78.824432" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="174" y="78.824432">+ M′ / 60</tspan></text>
+				<text x="174" y="94.824432" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="174" y="94.824432">+ S″ / 3600</tspan></text>
+		</g>
+</svg>
         </div>
     </div>
 
@@ -1202,11 +1231,11 @@ Power
         </select>
     </div>
     <!-- Section diagram -->
-    <svg id="beamSvg" width="120" height="70" viewBox="0 0 120 70" style="display:block;margin:0 auto 6px">
-        <rect x="20" y="10" width="80" height="50" fill="none" stroke="#388bfd" stroke-width="1.5"/>
-        <text x="60" y="68" fill="#8b949e" font-size="9" text-anchor="middle">w</text>
-        <text x="10" y="38" fill="#8b949e" font-size="9">h</text>
-    </svg>
+    <svg id="beamSvg" width="100%" height="70" display="block" style="margin:0 auto 6px" version="1.1" viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
+		<rect x="19.973" y="9.9725" width="77.913" height="47.677" rx="3.7795" ry="3.7795" fill="#474747" stroke="#388bfd" stroke-width="1.4569"/>
+		<text x="60" y="69" fill="#8b949e" font-size="9px" text-anchor="middle">W</text>
+		<text x="10" y="38" fill="#8b949e" font-size="9px">H</text>
+	</svg>
     <!-- Solid Rectangle inputs -->
     <div id="beamInputRect" style="display:flex;gap:4px;margin-bottom:4px">
         <input id="beamW" type="text" inputmode="decimal" class="cvin" placeholder="Width (mm)">
@@ -1414,8 +1443,10 @@ var _prettyMap = {
     'sqrt':'√', 'cbrt':'∛', 'abs':'|x|', 'exp':'eˣ'
 };
 function _pretty(s) {
-    return s.replace(/asin|acos|atan|sqrt|cbrt|abs|exp/g, function(m){ return _prettyMap[m] || m; })
-             .replace(/\*/g, '×');  // * -> x
+    // Substitute display symbols for raw function names and operators
+    return s.replace(/asin|acos|atan|sqrt|cbrt|abs|exp/g,
+                     function(m) { return _prettyMap[m] || m; })
+             .replace(/\*/g, '×');  // * -> ×
 }
 
 /* ----------------------------------------------------------------------------
@@ -1717,14 +1748,12 @@ function setCaretPos(el, pos) {
 }
 /* ----------------------------------------------------------------------------
    CARET POSITION CONVERSION
-   The display renders raw function names as shorter symbols, so display
-   positions and raw expr positions differ. These helpers convert between them.
+   The display renders raw function names as shorter symbols so display
+   positions and raw expr string positions differ. These helpers convert
+   between them using the shared _prettyMap substitution table.
    ---------------------------------------------------------------------------- */
-var _rawToDisp = {
-    'asin': 'sin⁻¹', 'acos': 'cos⁻¹', 'atan': 'tan⁻¹',
-    'sqrt': '√', 'cbrt': '∛', 'abs': '|x|', 'exp': 'eˣ'
-};
-var _rawKeys = Object.keys(_rawToDisp).sort(function(a,b){return b.length-a.length;});
+// _prettyMap is defined in section 1 (Global State) - reused here
+var _rawKeys = Object.keys(_prettyMap).sort(function(a,b){return b.length-a.length;});
 
 function _exprDispLen(rawExpr) {
     // Returns the display length of rawExpr after pretty substitution
@@ -1734,7 +1763,7 @@ function _exprDispLen(rawExpr) {
         for (var ki = 0; ki < _rawKeys.length; ki++) {
             var k = _rawKeys[ki];
             if (s.indexOf(k) === 0) {
-                len += _rawToDisp[k].length;
+                len += _prettyMap[k].length;
                 s = s.slice(k.length);
                 matched = true; break;
             }
@@ -1752,7 +1781,7 @@ function _dispPosToRaw(dispPos, rawExpr) {
         for (var ki = 0; ki < _rawKeys.length; ki++) {
             var k = _rawKeys[ki];
             if (s.indexOf(k) === 0) {
-                var dlen = _rawToDisp[k].length;
+                var dlen = _prettyMap[k].length;
                 if (dispIdx + dlen > dispPos) {
                     // Caret is inside the pretty symbol - snap to end
                     dispIdx = dispPos; rawIdx += k.length; matched = true; break;
@@ -1771,15 +1800,26 @@ function _rawPosToDisp(rawPos, rawExpr) {
     return _exprDispLen(rawExpr.slice(0, rawPos));
 }
 function insertAtCaret(text) {
-    var dispPos = getCaretPos(dispEl);
-    if (dispPos < 0) {
+    // In result mode (just after a calculation): always append to the
+    // full-precision expr regardless of caret position, then leave
+    // result mode so subsequent keys edit the expression normally.
+    if (window._resultMode) {
+        window._resultMode = false;
         expr += text;
-        _nextCaretPos = _rawPosToDisp(expr.length, expr);
+        _nextCaretPos = _exprDispLen(expr);
+        upd(); return;
+    }
+    // Normal mode: insert at current caret position (converting
+    // between display coordinates and raw string coordinates).
+    var dispPos = getCaretPos(dispEl);
+    if (dispPos < 0 || dispPos >= _exprDispLen(expr)) {
+        // Caret at or beyond end - append
+        expr += text;
+        _nextCaretPos = _exprDispLen(expr);
     } else {
-        // Convert display position to raw index before slicing
+        // Caret mid-expression - insert at correct raw position
         var rawPos = _dispPosToRaw(dispPos, expr);
         expr = expr.slice(0, rawPos) + text + expr.slice(rawPos);
-        // Set caret after the inserted text in display coordinates
         _nextCaretPos = _rawPosToDisp(rawPos + text.length, expr);
     }
     upd();
@@ -1833,7 +1873,9 @@ function doCalc() {
         exprEl.textContent = _pretty(orig) + ' =';
         dispEl.className = ''; hl(fv, dispEl);
         ans  = v; updateAnsHint();
+        // expr = full precision for accurate chaining
         expr = parseFloat(v.toPrecision(12)).toString();
+        window._resultMode = true;  // flag: next button appends to full precision
         window._histIdx = -1;
         addHist(orig, fv);
     } catch (err) {
@@ -2539,32 +2581,27 @@ function wireBeam() {
     // SVG diagrams for each section type
     var diagrams = {
         rect:
-            "<rect x='20' y='10' width='80' height='50' fill='none' stroke='#388bfd' stroke-width='1.5'/>"+
-            "<text x='60' y='68' fill='#8b949e' font-size='9' text-anchor='middle'>w</text>"+
-            "<text x='10' y='38' fill='#8b949e' font-size='9'>h</text>"+
-            "<text x='60' y='82' fill='#6e7681' font-size='8' text-anchor='middle'>Ixx = wh&#179;/12</text>",
-        hrect:
-            "<rect x='10' y='8' width='100' height='54' fill='none' stroke='#388bfd' stroke-width='1.5'/>"+
-            "<rect x='22' y='18' width='76' height='34' fill='none' stroke='#388bfd' stroke-width='1' stroke-dasharray='3,2'/>"+
+            "<rect x='19.973' y='9.9725' width='77.913' height='47.677' rx='3.7795' ry='3.7795' fill='#474747' stroke='#388bfd' stroke-width='1.5'/>"+
             "<text x='60' y='68' fill='#8b949e' font-size='9' text-anchor='middle'>W</text>"+
-            "<text x='4'  y='38' fill='#8b949e' font-size='9'>H</text>"+
-            "<line x1='10' y1='64' x2='22' y2='64' stroke='#d29922' stroke-width='1.5'/>"+
-            "<text x='16' y='70' fill='#d29922' font-size='8' text-anchor='middle'>t</text>"+
-            "<text x='60' y='82' fill='#6e7681' font-size='8' text-anchor='middle'>Ixx = (WH&#179;-wh&#179;)/12</text>",
+            "<text x='10' y='38' fill='#8b949e' font-size='9'>H</text>",
+        hrect:
+			"<text x='60' y='69' fill='#8b949e' font-size='9px' text-anchor='middle'>W</text>"+
+			"<text x='10' y='38' fill='#8b949e' font-size='9px'>H</text>"+
+			"<text x='104.96282' y='37.246902'fill='#8b949e' font-size='9px' display='block'>T</text>"+
+			"<path d='m23.752 9.9727c-2.0939 0-3.7793 1.6854-3.7793 3.7793v40.117c0 2.0939 1.6854 3.7812 3.7793 3.7812h70.354c2.0939 0 3.7793-1.6874 3.7793-3.7812v-40.117c0-2.0939-1.6854-3.7793-3.7793-3.7793h-70.354zm2.3398 4.959h65.674c0.62816 0 1.1348 0.50661 1.1348 1.1348v35.49c0 0.62816-0.50661 1.1328-1.1348 1.1328h-65.674c-0.62816 0-1.1348-0.50466-1.1348-1.1328v-35.49c0-0.62816 0.50661-1.1348 1.1348-1.1348z' display='inline' fill='#474747' stroke='#388bfd' stroke-width='1.5'/>"+
+			"<path transform='translate(4.0299 7.5746)' d='m83.38 32.478v0.95508h-6.8887v0.75586h6.8887v0.9668l4.6895-1.3398-4.6895-1.3379z' display='inline' fill='#8b949e' fill-rule='evenodd' stop-color='#000000' stroke-linecap='square' style='margin:0 auto 6px;paint-order:stroke fill markers'/>"+
+			"<path transform='matrix(-1 0 0 1 186.17 7.5746)' d='m83.38 32.478v0.95508h-6.8887v0.75586h6.8887v0.9668l4.6895-1.3398z' display='inline' fill='#8b949e' fill-rule='evenodd' stop-color='#000000' stroke-linecap='square' style='margin:0 auto 6px;paint-order:stroke fill markers'/>",
         circ:
-            "<circle cx='60' cy='35' r='28' fill='none' stroke='#388bfd' stroke-width='1.5'/>"+
-            "<line x1='60' y1='35' x2='88' y2='35' stroke='#3fb950' stroke-width='1.5'/>"+
-            "<text x='74' y='30' fill='#3fb950' font-size='9' text-anchor='middle'>r</text>"+
-            "<text x='60' y='70' fill='#8b949e' font-size='9' text-anchor='middle'>d</text>"+
-            "<text x='60' y='82' fill='#6e7681' font-size='8' text-anchor='middle'>I = &#960;d&#8308;/64</text>",
+            "<circle cx='60' cy='34' r='28' fill='#474747' stroke='#388bfd' stroke-width='1.5'/>"+
+            "<line x1='32' y1='34' x2='88' y2='34' stroke='#3fb950' stroke-width='1.5'/>"+
+            "<text x='60' y='30' fill='#8b949e' font-size='9' text-anchor='middle'>D</text>",
         hcirc:
-            "<circle cx='60' cy='35' r='28' fill='none' stroke='#388bfd' stroke-width='1.5'/>"+
-            "<circle cx='60' cy='35' r='18' fill='none' stroke='#388bfd' stroke-width='1' stroke-dasharray='3,2'/>"+
-            "<line x1='60' y1='35' x2='88' y2='35' stroke='#3fb950' stroke-width='1.5'/>"+
-            "<text x='74' y='30' fill='#3fb950' font-size='9' text-anchor='middle'>D</text>"+
-            "<line x1='60' y1='35' x2='78' y2='35' stroke='#d29922' stroke-width='2'/>"+
-            "<text x='69' y='44' fill='#d29922' font-size='8' text-anchor='middle'>t</text>"+
-            "<text x='60' y='82' fill='#6e7681' font-size='8' text-anchor='middle'>I = &#960;(D&#8308;-d&#8308;)/64</text>"
+			"<line x1='36.279' x2='83.721' y1='35' y2='35' stroke='#3fb950' stroke-width='1.9525' style='margin:0 auto 6px'/>"+
+			"<path d='m60 7c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm-0.14453 3.7246a23.868 23.868 0 0 1 23.869 23.869 23.868 23.868 0 0 1-23.869 23.867 23.868 23.868 0 0 1-23.867-23.867 23.868 23.868 0 0 1 23.867-23.869z' display='inline' fill='#474747' stroke='#388bfd' stroke-width='1.5118'/>"+
+			"<text x='60.210526' y='31.789474' fill='#3fb950' font-size='9px' text-anchor='middle'>D</text>"+
+			"<path d='m75.765 25.675 0.4006 0.867-6.2534 2.8895 0.31704 0.68615 6.2534-2.8895 0.40552 0.87764 3.695-3.1833z' display='inline' fill='#8b949e' fill-rule='evenodd' stop-color='#000000' stroke-linecap='square' style='paint-order:stroke fill markers'/>"+
+			"<path d='m89.726 19.224 0.4006 0.867 6.2534-2.8895 0.31705 0.68615-6.2534 2.8895 0.40552 0.87764-4.819 0.75072z' display='inline' fill='#8b949e' fill-rule='evenodd' stop-color='#000000' stroke-linecap='square' style='margin:0 auto 6px;paint-order:stroke fill markers'/>"+
+			"<text x='100' y='20'fill='#8b949e' font-size='9px' display='block'>T</text>",
     };
     function showPanel() {
         // Show the correct input group
@@ -3045,7 +3082,15 @@ function _init() {
         dispEl.addEventListener('input', function () {
             if (exprEl.textContent && exprEl.textContent.indexOf('=') >= 0) exprEl.textContent = '';
             var cp2 = getCaretPos(dispEl);
-            expr = this.textContent.replace(/\n/g, '').trim();
+            // If in result mode, don't let direct typing corrupt full-precision expr
+            if (window._resultMode) {
+                // Restore the display to full-precision expr and let insertAtCaret handle it
+                hl(expr, dispEl);
+                return;
+            }
+            window._resultMode = false;
+            expr = this.textContent.replace(/\n/g, '').trim()
+                       .replace(/\u00d7/g, '*');  // reverse x -> *
             hl(expr, dispEl); setCaretPos(dispEl, cp2);
             var bk = 0;
             for (var ci = 0; ci < expr.length; ci++) {
@@ -3054,6 +3099,19 @@ function _init() {
             dispEl.style.outline = bk !== 0 ? '2px solid #f85149' : '';
         });
         dispEl.addEventListener('keydown', function (e) {
+            // Intercept printable calculator keys so they go through insertAtCaret
+            // This ensures _resultMode and full-precision expr are respected
+            var _k = e.key;
+            if (_k === 'Decimal')  _k = '.';
+            if (_k === 'Multiply') _k = '*';
+            if (_k === 'Add')      _k = '+';
+            if (_k === 'Subtract') _k = '-';
+            if (_k === 'Divide')   _k = '/';
+            if ('0123456789.+-*/()^'.indexOf(_k) >= 0) {
+                e.preventDefault();  // stop DOM insertion
+                insertAtCaret(_k);   // route through our handler
+                return;
+            }
             if (e.key === 'Enter') { e.preventDefault(); doCalc(); }
             else if (e.key === 'Escape') { e.preventDefault(); expr = ''; hl(expr, dispEl); exprEl.textContent = ''; }
             else if ((e.ctrlKey||e.metaKey) && e.key === 'z') {
@@ -3147,6 +3205,18 @@ function _init() {
             if (v === 'sq')    { insertAtCaret('^2');  return; }
             if (v === 'cu')    { insertAtCaret('^3');  return; }
             if (v === 'rcp')   { insertAtCaret('1/(');  return; }
+            if (v === 'alog') {  // antilog = 10^(x)
+                window._resultMode = false;
+                if (expr && expr !== '0') {
+                    expr = '10^(' + expr + ')';
+                    exprEl.textContent = '';
+                    _nextCaretPos = _exprDispLen(expr);
+                    upd();
+                } else {
+                    insertAtCaret('10^(');
+                }
+                return;
+            }
             if (v === '00')    { insertAtCaret('00');  return; }
             if (v === 'SHIFT') { toggleShift(); return; }
             if (v === 'CPY')   { copyR(); return; }
