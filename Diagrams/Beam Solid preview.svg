@@ -1,0 +1,5 @@
+<svg id="beamSvg" width="120" height="70" display="block" style="margin:0 auto 6px" version="1.1" viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
+		<rect x="19.973" y="9.9725" width="77.913" height="47.677" rx="3.7795" ry="3.7795" fill="#474747" stroke="#388bfd" stroke-width="1.4569"/>
+		<text x="60" y="66.208954" fill="#8b949e" font-size="9px" text-anchor="middle">w</text>
+		<text x="10" y="38" fill="#8b949e" font-size="9">h</text>
+</svg>
